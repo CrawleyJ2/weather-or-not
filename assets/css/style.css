@@ -1,0 +1,43 @@
+header {
+  padding: 18px;
+  margin-bottom: 18px;
+  text-align: center;
+  color: #ffffff;
+  font-size: 26px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  background: linear-gradient(to right, #6c6cff, #000080);
+}
+
+.title {
+  color: #000000;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  background-color: #000080;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.btn {
+  color: #ffffff;
+  text-align: center;
+  background-color: #000080;
+}
+
+.btn:hover {
+  background-color: #6c6cff;
+}
+
+/*
+
+favorable
+
+moderate
+
+severe
+
+*/
