@@ -9,20 +9,74 @@
   <title>Weather Dashboard</title>
 </head>
 <body>
-  <header>Weather Dashboard</header>
-  <div>
-    <form>
-      <label>Search for a City:</label>
-      <input type="text" placeholder="Enter City">
-      <button type="submit">Search</button>
-    </form>
+  <header class="col-12">Weather Dashboard</header>
+  <div class="d-flex row">
+    <div class="flex-column justify-content-around">
+      <div class="col-12">
+        <form id="search-form">
+          <label class="title">Search for a City:</label>
+          <input class="form-control" type="text" placeholder="Enter City">
+          <button class="col-12 btn" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="flex-column col-12 col-sm-6 col-md-9 justify-content-around">
+      <div class="col-12">
+        <div class="card current">
+          <h3 class="title current"></h3>
+          <p>Temp: <span id="temp"></span></p> 
+          <p>Wind: <span id="wind"></span></p>
+          <p>Humidity: <span id="humidity"></span></p>
+          <p>UV Index: <span id="uv-index"></span></p>
+        </div>
+      </div>
+      <div class="flex-column" id="forecast">
+        <div class="col-12 title">5 Day Forecast</div>
+        <div class="d-flex row justify-content-around">
+          <div class="card col-12 col-md-6 col-lg-2 forecast" id="day1">
+            <h3 id="day1-date"></h3>
+            <h4 id="day1-icon"></h4>
+            <p>Temp</p>
+            <p>Humidity</p>
+            <p>Wind</p>
+          </div>
+
+          <div class="card col-12 col-md-6 col-lg-2 forecast" id="day2">
+            <h3 id="day2-date"></h3>
+            <h4 id="day2-icon"></h4>
+            <p>Temp</p>
+            <p>Humidity</p>
+            <p>Wind</p>
+          </div>
+
+          <div class="card col-12 col-md-6 col-lg-2 forecast" id="day3">
+            <h3 id="day3-date"></h3>
+            <h4 id="day3-icon"></h4>
+            <p>Temp</p>
+            <p>Humidity</p>
+            <p>Wind</p>
+          </div>
+
+          <div class="card col-12 col-md-6 col-lg-2 forecast" id="day4">
+            <h3 id="day4-date"></h3>
+            <h4 id="day4-icon"></h4>
+            <p>Temp</p>
+            <p>Humidity</p>
+            <p>Wind</p>
+          </div>
+
+          <div class="card col-12 col-md-6 col-lg-2 forecast" id="day5">
+            <h3 id="day5-date"></h3>
+            <h4 id="day5-icon"></h4>
+            <p>Temp</p>
+            <p>Humidity</p>
+            <p>Wind</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <!-- stored cities-->
-  </div>
-  <div>
-    <!-- city data and 5 day forecast-->
-  </div>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./assets/js/script.js"></script>
