@@ -1,3 +1,6 @@
+const savedCityData = localStorage.getItem('cities');
+
+
 const pullWeather = function(city) {
   fetch('https://api.openweathermap.org/geo/1.0/direct?q='+ city +'&limit=1&appid=e89a8e141812e6ab1807eaf3ed0ffd77')
   .then(function(response) {

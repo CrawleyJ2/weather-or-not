@@ -16,7 +16,18 @@ header {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#current {
+  background-color: #6c6cff;
+  color: #ffffff;
+  padding: 10px;
+}
+
+#forecast {
+  margin-top: 5px;
+}
+
 .card {
+  margin-top: 5px;
   background-color: #000080;
   color: #ffffff;
   border-radius: 10px;
