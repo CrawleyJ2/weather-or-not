@@ -65,18 +65,24 @@ var pullWeather = function(city) {
           console.log(data);
           var cityTitleEl = document.querySelector('#city-date');
           cityTitleEl.innerHTML = city + " " + moment.unix(data.current.dt).format('MM/DD/YYYY') + ' <img src="https://openweathermap.org/img/wn/' + data.current.weather[0].icon + '.png">';
-          // city current temp info
           var currentTempEl = document.querySelector('#temp');
-          currentTempEl.innerHTML = data.current.temp + '<span>&#176;</span>F';
-          // city current wind info
+          currentTempEl.innerHTML = Math.floor(data.current.temp) + '<span>&#176;</span> F';
           var currentWindEl = document.querySelector('#wind');
-          currentWindEl.innerHTML = data.current.wind_speed + ' MPH';
-          // city current humidity info
+          currentWindEl.innerHTML = Math.floor(data.current.wind_speed) + ' MPH';
           var currentHumidityEl = document.querySelector('#humidity');
           currentHumidityEl.innerHTML = data.current.humidity + '<span>&#37;</span>';
-          // city current uv index info
           var currentUVIndexEl = document.querySelector('#uv-index');
-          currentUVIndexEl.innerHTML = data.current.uvi;
+          currentUVIndexEl.innerHTML = Math.floor(data.current.uvi);
+          // handler for displaying severity of uv index
+          if (parseInt(currentUVIndexEl.textContent) < 3) {
+            currentUVIndexEl.setAttribute('id', 'low');
+          } else if (parseInt(currentUVIndexEl.textContent) > 7.99) {
+            currentUVIndexEl.setAttribute('id', 'severe');
+          } else {
+            currentUVIndexEl.setAttribute('id', 'moderate');
+          }
+
+          // set up for 5 day forecart
         });
       });
     });

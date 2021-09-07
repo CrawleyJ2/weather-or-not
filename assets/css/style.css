@@ -55,12 +55,20 @@ header {
   text-align: center;
 }
 
-/*
+#low {
+  background-color: #7aeb7a;
+  color: #ffffff;
+}
 
-favorable
+#moderate {
+ background-color: #ffd500;
+ color: #000000;
+ padding: 6px;
+ border-radius: 10%;
+}
 
-moderate
-
-severe
-
-*/
+#severe {
+  background-color: #cc0000;
+  padding: 6px;
+  border-radius: 10%;
+}
